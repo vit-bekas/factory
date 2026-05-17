@@ -1,0 +1,2 @@
+Run MySQL: $> /Applications/MySQLWorkbench.app/Contents/MacOS/MySQLWorkbench
+MySQL console: /usr/local/mysql/bin/mysql -u root -p
