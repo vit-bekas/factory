@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `factory` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `factory`;
 -- MySQL dump 10.13  Distrib 8.0.24, for macos11 (x86_64)
 --
 -- Host: 127.0.0.1    Database: factory
@@ -57,11 +59,11 @@ CREATE TABLE `Parts` (
   `ID` int unsigned NOT NULL AUTO_INCREMENT,
   `Nr` varchar(20) NOT NULL DEFAULT '0',
   `Name` varchar(20) NOT NULL DEFAULT 'NoName',
-  `Dir` varchar(45) DEFAULT NULL,
-  `Model` varchar(45) DEFAULT NULL,
-  `Drawing` varchar(45) DEFAULT NULL,
-  `Photo` varchar(45) DEFAULT NULL,
-  `G-code` varchar(45) DEFAULT NULL,
+  `Dir` varchar(255) DEFAULT NULL,
+  `Model` varchar(255) DEFAULT NULL,
+  `Drawing` varchar(255) DEFAULT NULL,
+  `Photo` varchar(255) DEFAULT NULL,
+  `G_Code` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `Name_UNIQUE` (`Name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -90,12 +92,12 @@ CREATE TABLE `Tools` (
   `Unique_Code` varchar(45) DEFAULT NULL,
   `Name` varchar(45) NOT NULL DEFAULT 'NoName',
   `Length_mm` decimal(7,3) DEFAULT '0.000',
-  `Diametr_mm` decimal(6,3) DEFAULT '0.000',
+  `Diameter_mm` decimal(6,3) DEFAULT NULL,
   `Angle` decimal(4,2) DEFAULT '0.00',
   `Storage_Machine_ID` varchar(10) DEFAULT NULL,
   `Slot` int DEFAULT NULL,
-  `Dir` varchar(45) DEFAULT NULL,
-  `Photo` varchar(45) DEFAULT NULL,
+  `Dir` varchar(255) DEFAULT NULL,
+  `Photo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`),
   UNIQUE KEY `Unique_Code_UNIQUE` (`Unique_Code`)
@@ -121,4 +123,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-17 12:52:50
+-- Dump completed on 2026-05-20 19:29:09
