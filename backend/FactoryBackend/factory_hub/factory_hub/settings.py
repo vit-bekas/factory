@@ -80,10 +80,7 @@ WSGI_APPLICATION = 'factory_hub.wsgi.application'
 # factory_hub/settings.py
 
 DATABASES = {
-    'default': {
-        #'ENGINE': 'django.db.backends.mysql', # Твои дампы сделаны в MySQL
-        'default': env.db(),  # Стандартный порт для MySQL
-    }
+    'default': env.db()
 }
 
 
