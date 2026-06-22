@@ -1,0 +1,5 @@
+.env template
+
+DEBUG=True
+SECRET_KEY='from_settings.py'
+DATABASE_URL=mysql://su_name:password@127.0.0.1:3306/factory
